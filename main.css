@@ -11,7 +11,7 @@
 @font-face {
 
     font-family: metro;
-    src: url(metro-light.ttf.otf);
+    src: url(metro-light(1).ttf.otf);
 }
 
 @media (max-width: 900px) {
