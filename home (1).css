@@ -1,0 +1,258 @@
+@font-face {
+        font-family: myFont;
+        src: url(coolvetica.ttf.otf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+
+    font-family: metro;
+    src: url(metro-light.ttf.otf);
+}
+
+@media (max-width: 900px) {
+    .button{
+      display: none;
+    }
+    .nav-but {
+      display: none;
+    }
+    .logo {
+      margin-left: -67px;
+      margin-top: -17px;
+      position: absolute;
+      left: 50%;
+      right: 50%;
+    }
+  
+}
+
+body {
+    background-image: url('gbhom.jpg');
+    background-size: cover; /* Adjust to your preference */
+    animation: moveLeft 10s linear infinite; /* Adjust the duration as needed */
+    margin: 0;
+    padding: 0;
+
+}
+
+@keyframes moveLeft {
+    0% {
+        background-position: 0% 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+/* HAMBURGER */
+.menu-toggle {
+  display: none;
+  float: left;
+  padding: 26px 20px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 4px 0;
+  background-color: rgb(83, 83, 83);
+}
+
+
+
+/* HAMBURGER END */
+
+
+/*THIS IS THE START OF NAVIGATION HEADER*/
+
+
+.navbar {
+    width: 100%;
+    background-color: #ffffff; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    transition: background-color 0.5s; 
+    font-size: 15px;
+    position: fixed;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.020); 
+    transition: height 0.3s;
+}
+  
+  .button:hover {
+    animation: ani 8s linear infinite;
+    border: none;
+  }
+  
+  @keyframes ani {
+    0% {
+      background-position: 0%;
+    }
+  
+    100% {
+      background-position: 400%;
+    }
+  }
+  
+  .button {
+    height: 35px;
+    width: 140px;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1.5px solid #252525;
+    overflow: hidden;
+    border-radius: 10px;
+    color: #222222;
+    transition: all 0.8s ease-in-out;
+    font-family: myFont;
+    transition: 0.4s;
+    
+  }
+  .button:active {
+    scale: 1.1;
+  }
+  
+  .btn-txt {
+    z-index: 1;
+    font-weight: 100;
+    font-size: 15px;
+  }
+  
+  .type1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.5s ease-in-out;
+    background-color: #333;
+    border-radius: 30px;
+    visibility: hidden;
+    height: 10px;
+    width: 10px;
+    z-index: -1;
+  }
+  
+  .button:hover {
+    box-shadow: 1px 1px 200px #ffffff;
+    color: #ffffff;
+    border: none;
+  }
+  
+  .type1:hover::after {
+    visibility: visible;
+    transform: scale(100) translateX(2px);
+  }
+
+
+.logo {
+    display: flex;
+    align-items: center;
+
+}
+
+.logopic {
+    width: 35px; 
+    height: auto;
+    position: relative;
+   padding-right: 5px ;
+
+}
+
+.logoname {
+    color: rgb(0, 0, 0);
+    font-size: 27px;
+    font-family: myFont;
+    font-weight: 200;
+
+}
+.nav-buttons {
+    display: block;
+    justify-content: center;
+    align-items: center;  
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.nav-buttons a {
+    color: rgb(172, 172, 172);
+    text-decoration: none;
+    padding: 7px 12px;
+    margin-top: 6px;
+    transition: color 0.5s; 
+    font-family: metro;
+}
+
+.nav-buttons a:hover {
+    color: #000000; 
+}
+
+
+
+
+
+
+
+
+
+
+/*THIS IS THE START OF HOME CODES*/
+
+
+
+
+.welcome1 {
+
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 80px;
+    margin-right: 7.5%;
+    padding-bottom: 0%;
+
+}
+
+.welcome2 {
+
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 100px;
+    margin-right: 7.5%;
+    margin-bottom: 1%;
+    font-weight:  bolder;
+    padding-top: 50px;
+
+}
+.nav-but {
+  border: none;
+  outline: none;
+  position: relative;
+}
+
+.nav-but::before {
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(41, 41, 41);
+  transform: scaleX(0);
+  transform-origin: bottom;
+  transition: transform .3s ease-in-out;
+}
+
+.nav-but:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom;
+}
+
+
