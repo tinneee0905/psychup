@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="miguel.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>PsychUp</title>
+</head>
+<body>
+
+    <header class="websitelogo">
+        <div class="logo">gabbi was here hi gabbeng nagtimpla lang ako kape</div>
+        <nav class="navbar">
+
+            <a href="#home">home</a>
+            <a href="#services">services</a>
+            <a href="#aboutus">about</a>
+            <a href="#contact">contact</a>
+            
+        </nav>
+    </header>
+    <header class="mobile-site" id="mobile-site">
+        <div class="mainlogo" id="mainlogo">
+            <img src="logo.png" alt="" class="mobile-logo">
+            <div class="mob-logo">psychUp</div>
+        </div>
+
+        
+    </header>
+    <div class="hamburger" id="hamburger-mob">
+        <div class="bar" id="bar1"></div>
+        <div class="bar" id="bar2"></div>
+        <div class="bar" id="bar3"></div>
+    </div> 
+    
+    <div class="sliding-div">
+        <div class="wrapper">
+            <div class="home">home</div>
+            <div class="services">services</div>
+            <div class="contactus">contact</div>
+            <div class="aboutus">about</div>
+        </div>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+
+    <div class="spanBottom-mob">
+        <div class="mob-loc">
+
+            
+            <img src="pin.png" alt="" class="pin">
+            <div class="loc">
+                <span class="mul">mulawin <br> <span class="aznat">tanza, cavite</span></span>
+            </div>
+        </div>
+      
+        <a href="#services"><img src="arrow1.png" alt="" class="arrow1"></a>
+        
+    </div>
+
+
+
+
+
+    <div class="spanBottom">
+
+        <img src="logo.png" alt="" class="logopic">
+
+        <div class="location">
+            <span class="mulawin">mulawin</span> <br><span class="tanza">tanza, cavite</span>
+        </div>
+
+        <div class="psycho">
+            <span class="psychological">psychological</span> <br><span class="clinic">clinic</span>
+        </div>
+
+        <a href="#services"><img src="arrow.png" alt="" class="arrow"></a>
+        
+    </div>
+
+    <div class="parent" id="home">
+
+        
+
+        <div class="div1">
+            
+            <div class="mob-title" align="center">
+                <span class="mob-heading"> Begin your <br><i>mental wellness</i> <br>journey with <br><u>PsychUp.</u></span>
+
+                <h1 class="mob-tagline">[ Explore, learn and nurture <br> a healthier mind. ]</h1>
+            </div>
+            
+
+
+
+            <h1 class="sample1">
+                <span class="leftAnim">Begin your <i>mental wellness</i></span> <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;journey - with <u>PsychUp.</u>
+            </h1>
+            <h1 class="tagline" id="tagline">
+              [ Explore, learn and nurture <br> a healthier mind. ]
+            </h1>
+        </div>
+
+        <div class="div2" id="services">
+
+            <div class="services-nav">
+                <div class="services-indicator">
+                    services
+                </div>
+                <div class="services-ham" id="hamburgerBtn">
+                    <div class="barHamb" id="bar1-hamb"></div>
+                    <div class="barHamb" id="bar2-hamb"></div>
+                    <div class="barHamb" id="bar3-hamb"></div>
+                </div>
+                <div class="sliding-down">
+                    <div class="service-logo">
+                        <img class="lugu" src="logopic.png" alt="Logo">
+                        <p class="service-psychUp">PsychUp</p>
+                    </div>
+                    <div class="effectiveness">[Explore, Learn, and nurture<br> <span class="spacing-2"> a <span class="spacing1" > healthier </span>   mind.]</span></div>
+                    <div class="wrapper-service">
+                        <!-- Add your service content here -->
+                        <div class="home-service">Home</div>
+                        <div class="services-service">Services</div>
+                        <div class="aboutus-service">AboutUs</div>
+                        <div class="contactus-service">Contact</div>
+                    </div> 
+
+
+                        
+                     
+                  
+                </div>
+            </div>
+            <div class="overlay-service"></div>
+        
+                    <!--div box box-->
+
+            <div class="services-title">
+                <div class="maintit">
+                    "Empowering <br> Minds, 
+                                      Inspiring <br> Lives."
+                </div>
+                <div class="service-subTitle">
+                    At PsychUp, we're here to <br> nurture your well-being 
+                    through <br> expertly crafted services, <br> fostering
+                    self-discovery, healing, <br> and personal growth.
+                </div>
+            </div>   
+            
+               <div class="box-parent">
+                
+                   <div class="box-child-1">dsds </div>
+                   <div class="box-child-2"> jrejbr</div>
+                   <div class="box-child-3"> jehruehr</div>
+
+               </div>
+
+               <button class="button type1"> 
+                <span class="btn-txt">
+                    Appointment
+                </span>
+            </button>
+     
+        </div>
+        <div class="div3" id="aboutus">
+
+        </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        
+        document.querySelector('.hamburger').addEventListener('click', function () {
+            this.classList.toggle('active');
+        });
+    
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburgerBtn = document.querySelector('.hamburger');
+            const slidingDiv = document.querySelector('.sliding-div');
+            const overlay = document.getElementById('overlay');
+    
+            hamburgerBtn.addEventListener('click', function () {
+                slidingDiv.classList.toggle('slide-in');
+                overlay.classList.toggle('overlay-visible');
+            });
+    
+            const hamburgerBtn2 = document.getElementById('hamburgerBtn');
+    
+            hamburgerBtn2.addEventListener('click', function () {
+                hamburgerBtn2.classList.toggle('active');
+            });
+    
+            document.querySelector('.navbar a[href="#services"]').addEventListener('click', function () {
+                document.querySelector('.div2').classList.toggle('slide-in');
+                document.querySelector('.div3').classList.toggle('slide-in');
+            });
+    
+            window.addEventListener("scroll", function () {
+                var hamburger = document.getElementById("bar1");
+                var scrollPosition = window.scrollY;
+    
+                if (scrollPosition >= 700) {
+                    hamburger.classList.add("black");
+                } else {
+                    hamburger.classList.remove("black");
+                }
+            });
+    
+            // Add similar scroll event listeners for bar2 and bar3 if needed
+        });
+    
+        $(document).ready(function () {
+            $("#hamburgerBtn").click(function () {
+                $(".sliding-down").toggleClass("slide-in");
+                $(".overlay-service").toggleClass("overlay-service-visible");
+            });
+    
+            $(".overlay-service").click(function () {
+                $(".sliding-down").removeClass("slide-in");
+                $(".overlay-service").removeClass("overlay-service-visible");
+            });
+        });
+    
+        function toggleSlidingDiv() {
+            const div2 = document.querySelector('.div2');
+            const div3 = document.querySelector('.div3');
+    
+            // Check if the user is in the div2 or div3 section
+            const isInDiv2 = window.scrollY >= div2.offsetTop && window.scrollY < div3.offsetTop;
+            const isInDiv3 = window.scrollY >= div3.offsetTop;
+    
+            // Toggle the class based on the section
+            slidingDiv.classList.toggle('slide-in', isInDiv2 || isInDiv3);
+            overlay.classList.toggle('overlay-visible', isInDiv2 || isInDiv3);
+        }
+    
+        // Initial check on page load
+        toggleSlidingDiv();
+    
+        // Listen for scroll events
+        window.addEventListener("scroll", toggleSlidingDiv);
+    
+        
+    </script>
+    
+    </script>
+    
+</body>
+</html>
