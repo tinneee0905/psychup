@@ -342,3 +342,6 @@ body {
 .show-notif {
     transform: translateY(0);
 }
+h2 {
+font-family: coolvetica;
+}
