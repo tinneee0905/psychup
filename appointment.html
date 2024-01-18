@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="appointment.css">
+    <title>PsychUp Appointment</title>
+</head>
+<body>
+    <div class="parent">
+        <header class="websitelogo">
+            <div class="logo">psychUp</div>
+            <nav class="navbar">
+
+                <a href="homepage.html#home">home</a>
+                <a href="homepage.html#services">services</a>
+                <a href="homepage.html#aboutus">about</a>
+                <a href="#contact">contact</a>
+                
+            </nav>
+        </header>
+        <div class="lefttitle">
+            <div class="tagline">
+                <div class="leftmaintitle">
+                    Lets talk.
+                </div>
+                <div class="subheading">
+                    Initiate your journey towards <br>
+                    wellness by scheduling an <br>
+                    appointment.
+                </div>
+            </div>
+        </div>
+      
+         <form 
+         action="https://formspree.io/f/mpzvwwpz"
+         method="post"
+         onsubmit="formNotif(event)">
+        <div class="righttitle">
+            <div class="boxappoint">
+          
+                <span class="namecontact">
+                    <input type="text" name="Name" class="forname" placeholder="Name" required>
+                    <input type="text" name="contact" class="forcontact" placeholder="Contact Number" required>
+                </span>
+                <span class="genderage">
+                    <select id="gender" name="gender" class="forgender" required>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <input type="text" name="Age" class="forage" placeholder="Age" required>
+                </span>
+                <span class="appointment-time">
+    <label for="time" class="timelabel" required>Preferred Time:</label>
+    <input type="time" id="time" name="time" class="fortime" required>
+</span>
+                <span class="dob">
+                    <label for="dob" class="doblabel" required>Date :</label>
+                    <input type="date" id="dob" name="dob" class="fordob" required>
+                </span>
+                <span class="services">
+                    <label for="services" class="servlabel">What service do you want to avail?</label>
+                     <select id="services" name="services" required>
+                        <option value="Diagnostic Assessments">Diagnostic Assessments</option>
+                        <option value="Intellectual Assessments">Intellectual Assessments</option>
+                        <option value="Emotional and Behavioral Assessments">Emotional and Behavioral Assessments</option>
+                        <option value="Neuropsychological Assessments">Neuropsychological Assessments</option>
+                        <option value="Therapeutic Assessments">Therapeutic Assessments</option>
+                    </select>
+                </span>
+                <span class="case">
+                    <input type="text" name="case" class="forcase" placeholder="Case" required>
+                </span>
+                <span class="submitbut">
+                    <input type="submit" value="Submit" class="submit-but" required>
+                </span>
+                
+            </div>
+        </div>
+    </form>
+        <div class="spanBottom">
+
+            <img src="logo.png" alt="" class="logopic">
+
+            <div class="location">
+                <span class="mulawin">mulawin</span> <br><span class="tanza">tanza, cavite</span>
+            </div>
+
+            <div class="psycho">
+                <span class="psychological">psychological</span> <br><span class="clinic">clinic</span>
+            </div>
+
+            <a href="#services"><img src="arrow.png" alt="" class="arrow"></a>
+            
+        </div>
+    </div>
+    <!--thervs code-->
+    <div class="outer-notif">
+        <div class="notif">
+            
+        </div>
+    </div>
+    <script>
+        function formNotif(event) {
+            event.preventDefault();
+            var formData = {
+                Name: document.getElementsByName("Name")[0].value,
+                Contact : document.getElementsByName("contact")[0].value,
+                Gender: document.getElementsByName("gender")[0].value,
+                Age: document.getElementsByName("Age")[0].value,
+                Time: document.getElementsByName("time")[0].value,
+                Date: document.getElementsByName("dob")[0].value,
+                Service: document.getElementsByName("services")[0].value,
+                Case: document.getElementsByName("case")[0].value,
+                
+            };
+            var notif = document.querySelector('.notif');
+            notif.innerHTML = '<h1>Clients Data Confirmation</h1><br>';
+            for (var key in formData) {
+                notif.innerHTML += '<h2>' + key + ': ' + formData[key] + '</h2>';
+            }
+            notif.innerHTML += '<br><br><h2>We are sending your appointment application, this will take some time.</h2>'
+            notif.innerHTML += '<br><h2>The PsychUp Assessment Center will inform you through call about your appointment.</h2>';
+            notif.innerHTML += '<br><br><h2 class="remaining-time">Note: Appointment website will close after 1 minute. <br> You can just take a screenshot to have a copy, Thankyou.</h2>';
+            document.querySelector('.outer-notif').classList.add('show-notif');
+            setTimeout(close, 60000);
+            var remainingTime  =document.getElementsByClassName("remaining-time");
+            var timeRemain = 60;
+            setInterval(function () {
+                timeRemain--;
+                if (remainingTime >= 0) {
+                    remainingTime.innerText = 'Closing in ' + timeRemain + ' seconds. You can just Take a screenshot to have copy.';
+                }
+            }, 1000);
+        }
+       
+    </script>
+</body>
+</html>
